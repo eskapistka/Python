@@ -2,7 +2,6 @@ import csv
 
 # This function checks if the key is between 0 and 94.
 def check_key(key):
-    # Replace the following lines with your code
     if key in range(0, 95):
         return True
     return False
