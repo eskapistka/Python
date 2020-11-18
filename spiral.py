@@ -13,13 +13,11 @@ def solution_1(n):
         for number in corners_squared[1:]:
             tem = number
             print(tem)
-            for x in range(1, 4):  # it executes 3 times
+            for x in range(1, 4): 
                 tem = tem + number + (x * dif)
                 print(tem)
             sum = sum + tem
             dif = dif - 2
-
-        print(sum)
     else:
         seq = int(n / 2)
         max_range = 1 + (seq - 1) * 2
@@ -35,13 +33,7 @@ def solution_1(n):
             sum = sum + tem
             dif = dif - 2
         sum = sum + odd_one
-        print(sum)
     pass
-
-
-# solution_1(2001)
-# 5343342001
-
 
 def isPrime(n):
     if (n <= 1):
@@ -57,7 +49,6 @@ def isPrime(n):
         i = i + 6
     return True
 
-
 def solution_2(n):
     primes = 0
     non_primes = 1
@@ -70,28 +61,20 @@ def solution_2(n):
             max_range = 1 + (seq - 1) * 2
             odd_one = (max_range + 2) ** 2 + 3 * (seq * -2)
 
-            # print(odd_one)
-
             if isPrime(odd_one):
                 primes = primes + 1
 
             corners_squared = [x ** 2 for x in range(1, max_range + 1, 2)]
             dif = -2
 
-            # print(corners_squared)
-
             for number in corners_squared[1:]:
                 if isPrime(number):
                     primes = primes + 1
-
-                    # print(number)
                 else:
                     non_primes = non_primes + 1
-                for x in range(1, 4):  # it executes 3 times
+                for x in range(1, 4):  
                     if isPrime(number + (x * dif)):
                         primes = primes + 1
-
-                        # print(number + (x * dif))
                     else:
                         non_primes = non_primes + 1
                 dif = dif - 2
@@ -101,14 +84,12 @@ def solution_2(n):
             corners_squared = [x ** 2 for x in range(1, max_range + 1, 2)]
             dif = -2
 
-            # print(corners_squared)
-
             for number in corners_squared[1:]:
                 if isPrime(number):
                     primes = primes + 1
                 else:
                     non_primes = non_primes + 1
-                for x in range(1, 4):  # it executes 3 times
+                for x in range(1, 4): 
                     if isPrime(number + (x * dif)):
                         primes = primes + 1
                     else:
@@ -116,7 +97,5 @@ def solution_2(n):
                 dif = dif - 2
 
         percentage = primes / (primes + non_primes) * 100
-        print(dimension)
-        print(percentage)
         dimension = dimension + 1
     pass
