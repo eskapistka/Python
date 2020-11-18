@@ -1,8 +1,8 @@
-# This code tries to guess the passcode given the data on successful logins The data on successful logins is in form
+# This code tries to guess the passcode given the data on successful logins. The data on successful logins is in form
 # of 3 characters that are always asked for in order For a successful login data example would be if the passcode was
 # 531278 then the 2nd 3rd and 5th characters would be 317
 # This code works for codes with just one apperance of each character, because it is based on
-# statistical approach on the most common place the character is
+# statistical approach on the most common place the character appears in the data on successful logins
 
 from collections import defaultdict
 
