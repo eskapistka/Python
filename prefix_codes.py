@@ -25,5 +25,3 @@ def solution(n):
     for p in huff:
         list.append(p[1])
     return list
-
-print(solution(100))
