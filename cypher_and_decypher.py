@@ -13,9 +13,9 @@ def check_upper_lower(s):
 
     for char in s:
         if char.islower():
-            lower = lower + 1
+            lower += 1
         if char.isupper():
-            upper = upper + 1
+            upper += 1
 
     return [upper, lower]
 
