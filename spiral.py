@@ -15,9 +15,9 @@ def diagonals_sum(n):
         for number in corners_squared[1:]:
             tem = number
             for x in range(1, 4):
-                tem = tem + number + (x * dif)
-            sum = sum + tem
-            dif = dif - 2
+                tem += number + (x * dif)
+            sum += tem
+            dif -= 2
     else:
         seq = int(n / 2)
         max_range = 1 + (seq - 1) * 2
@@ -29,9 +29,9 @@ def diagonals_sum(n):
         for number in corners_squared[1:]:
             tem = number
             for x in range(1, 4):  # it executes 3 times
-                tem = tem + number + (x * dif)
-            sum = sum + tem
-            dif = dif - 2
-        sum = sum + odd_one
+                tem += number + (x * dif)
+            sum += tem
+            dif -= 2
+        sum += odd_one
 
     return sum
