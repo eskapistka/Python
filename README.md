@@ -1,2 +1,2 @@
-# Python
-This is a collection of exercises I did using Python 3.8. As of today it's mostly school and University work.
+# Python 3.8
+This is a collection of exercises I did for my course at the University of Leeds.
